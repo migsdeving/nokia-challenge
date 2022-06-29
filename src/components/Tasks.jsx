@@ -21,18 +21,21 @@ function Tasks() {
   }, []);
 
   return (
-    <div className="flex flex-col w-full p-20">
-      <h2 className="text-xl mb-5">
+    <div className="flex flex-col w-full p-20 0">
+      <h2 className="text-xl mb-5 ">
         {" "}
         <b>Task List</b>
       </h2>
-      <ul className="list-disc">
-        {currentTasks
-          .filter((t) => t.completed !== true)
-          .map((t) => (
-            <li key={t.id}>{t.text}</li>
-          ))}
-      </ul>
+      <div className="overflow-auto px-5 border-2 border-black">
+        {" "}
+        <ul className="list-disc">
+          {currentTasks
+            .filter((t) => t.completed !== true)
+            .map((t) => (
+              <li key={t.id}>{t.text}</li>
+            ))}
+        </ul>
+      </div>
     </div>
   );
 }
