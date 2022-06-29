@@ -13,7 +13,11 @@ function App() {
         <Header />
         <div className="flex h-[600px] mt-10  border-2 border-black ">
           <MenuSelector SetSelectedMenu={SetSelectedMenu} />
-          {selectedMenu === "home" ? <Home /> : <Tasks />}
+          {selectedMenu === "home" ? (
+            <Home />
+          ) : selectedMenu === "tasks" ? (
+            <Tasks />
+          ) : null}
         </div>
       </div>
     </>
