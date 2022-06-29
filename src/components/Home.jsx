@@ -1,7 +1,13 @@
 import React from "react";
 
 function Home() {
-  return <div>Home</div>;
+  return (
+    <div className="flex w-full justify-center pt-10">
+      <h1 className="text-3xl">
+        <b>The best app ever</b>
+      </h1>
+    </div>
+  );
 }
 
 export default Home;
