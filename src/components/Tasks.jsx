@@ -29,8 +29,8 @@ function Tasks() {
       <div className="overflow-auto px-5 border-2 border-black">
         <ul data-testid="task-list" className="list-disc">
           {currentTasks
-            .slice(1)
-            .filter((t) => !t.completed)
+            .slice(1) //Removing the first Task that seems to be non relevant with id:0 and "Task" as its text
+            .filter((t) => !t.completed) //Removing tasks that were already completed- Only showing uncompleted tasks
             .map((t) => (
               <li key={t.id}>{t.text}</li>
             ))}

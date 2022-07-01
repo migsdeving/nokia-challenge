@@ -5,7 +5,7 @@ afterEach(() => {
   cleanup();
 });
 
-test("Home button click should should Home component ", () => {
+test("Home button click shows Home component ", () => {
   render(<App />);
   const homeButton = screen.getByTestId("home-button");
   fireEvent.click(homeButton);
@@ -13,7 +13,7 @@ test("Home button click should should Home component ", () => {
   expect(homeComponent).toBeInTheDocument();
 });
 
-test("Tasks button click should show Tasks component ", () => {
+test("Tasks button click shows Tasks component ", () => {
   render(<App />);
   const tasksButton = screen.getByTestId("tasks-button");
   fireEvent.click(tasksButton);

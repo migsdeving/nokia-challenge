@@ -5,7 +5,7 @@ import Home from "./components/Home";
 import Tasks from "./components/Tasks";
 
 function App() {
-  const [selectedMenu, SetSelectedMenu] = useState("home");
+  const [selectedMenu, SetSelectedMenu] = useState("home"); //this state controls what component is rendered on the page
   return (
     <>
       <div className=" h-screen">
