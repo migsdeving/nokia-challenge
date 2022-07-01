@@ -14,9 +14,9 @@ function App() {
           <MenuSelector SetSelectedMenu={SetSelectedMenu} />
           {selectedMenu === "home" ? (
             <Home />
-          ) : selectedMenu === "tasks" ? (
-            <Tasks />
-          ) : null}
+          ) : (
+            selectedMenu === "tasks" && <Tasks />
+          )}
         </div>
       </div>
     </>
